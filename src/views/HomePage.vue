@@ -1,6 +1,6 @@
 <script setup>
-import GameList from '@/components/GameList.vue'
-
+import GameList from '@/components/GameList.vue';
+import MainPagination from '@/components/MainPagination.vue';
 </script>
 
 <template>
