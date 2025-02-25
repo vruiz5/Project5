@@ -1,7 +1,5 @@
 <script setup>
-import NavMenu from '@/components/NavMenu.vue'
-//import MainPagination from './components/MainPagination.vue'
-  
+import NavMenu from '@/components/NavMenu.vue';
 </script>
 
 <template>
