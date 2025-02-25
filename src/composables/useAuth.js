@@ -7,21 +7,27 @@ import { useAuth as firebaseUseAuth } from '@vueuse/firebase'
 
 const auth = getAuth(firebaseApp);
 
-const { isAuthenticated, user } = firebaseUseAuth(auth)
+// Authentication methods
+export function useAuth() {
+  const { isAuthenticated } = firebaseUseAuth(auth);
 
-export const useAuth = () => {
-    const router = useRouter()
-
-    const login = async (username, password) => {
-        await signInWithEmailAndPassword(auth, username, password)
-        return isAuthenticated.value
+  const login = async (email, password) => {
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      router.push('/');
+    } catch (error) {
+      console.error("Login failed:", error);
     }
+  };
 
-    const logout = async () => {
-        await signOut(auth)
-        router.push({ name: 'Home' })
+  const logout = async () => {
+    try {
+      await signOut(auth);
+      router.push('/login');
+    } catch (error) {
+      console.error("Logout failed:", error);
     }
-    
-    return { isAuthenticated, user, login, logout }
+  };
 
+  return { isAuthenticated, login, logout };
 }
