@@ -1,11 +1,11 @@
 <script setup>
-import GameList from '@/components/GameList.vue';
-import MainPagination from '@/components/MainPagination.vue';
+import GameCards from '@/components/GameCards.vue';
+import HomePagination from '@/components/MainPagination.vue';
 </script>
 
 <template>
   <div class="container mx-auto">
-    <GameList />
-    <MainPagination />
+    <GameCards />
+    <HomePagination />
   </div>
 </template>

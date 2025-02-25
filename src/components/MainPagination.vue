@@ -1,22 +1,3 @@
-<script setup>
-import { ref } from 'vue'
-
-const pages = ref(10);
-const activePage = ref(1)
-
-const prevPage = () => {
-  if (activePage.value > 1) {
-    activePage.value--
-  }
-}
-
-const nextPage = () => {
-  if (activePage.value < pages.value) {
-    activePage.value++;
-  }
-}
-</script>
-
 <template>
   <div class="flex justify-center gap-4 p-8">
     <button @click="prevPage" :disabled="activePage === 1" class="rounded-md bg-slate-100 p-2 font-medium text-slate-700 shadow-md">
@@ -37,3 +18,22 @@ const nextPage = () => {
     </button>
   </div>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+
+const pages = ref(10);
+const activePage = ref(1)
+
+const prevPage = () => {
+  if (activePage.value > 1) {
+    activePage.value--
+  }
+}
+
+const nextPage = () => {
+  if (activePage.value < pages.value) {
+    activePage.value++;
+  }
+}
+</script>
