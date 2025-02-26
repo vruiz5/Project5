@@ -1,15 +1,14 @@
-//import { useRouter } from 'vue-router'
-import router from '../router'
-
-import { firebaseApp } from '@/composables/useFirebase'
+import { useRouter } from 'vue-router'
+import { firebaseApp } from './useFirebase'
 import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth'
 import { useAuth as firebaseUseAuth } from '@vueuse/firebase'
 
-const auth = getAuth(firebaseApp);
+const auth = getAuth(firebaseApp)
 
-// Authentication methods
-export function useAuth() {
-  const { isAuthenticated } = firebaseUseAuth(auth);
+const { isAuthenticated, user } = firebaseUseAuth(auth)
+
+export const useAuth = () => {
+  const router = useRouter()
 
   const login = async (email, password) => {
     try {

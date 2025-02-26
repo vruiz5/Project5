@@ -5,7 +5,7 @@
     <RouterLink :to="{ name: 'SettingsPage' }">Settings</RouterLink>
 
     <div v-if="isAuthenticated">
-      <span>Welcome, {{ user.email }}</span>
+      Welcome, {{ user.email }}
       <button @click="logout" class="rounded-md bg-red-500 px-4 py-2 mx-2 text-red-100 hover:bg-red-700">Logout</button>
     </div>
     <div v-else>
@@ -14,7 +14,18 @@
   </nav>
 </template>
 
+<style lang="postcss" scoped>
+nav {
+  @apply flex justify-center space-x-4;
+
+  & .router-link-active {
+    @apply underline underline-offset-4;
+  }
+}
+</style>
+
 <script setup>
-import { useAuth } from '@/composables/useAuth';
+import { useAuth } from '../composables/useAuth';
 const { isAuthenticated, logout, user } = useAuth();
+
 </script>

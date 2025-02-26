@@ -1,12 +1,13 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import HomePage from '@/views/HomePage.vue';
-import GameDetail from '@/views/GameDetail.vue';
-import LoginPage from '@/views/LoginPage.vue';
-import SettingsPage from '@/views/SettingsPage.vue';
-import OtherPage from '@/views/OtherPage.vue';
-import { useAuth } from '@/composables/useAuth';
+import { createRouter, createWebHistory } from 'vue-router'
 
-const { isAuthenticated } = useAuth();
+import HomePage from '@/views/HomePage.vue'
+import GameDetail from '@/views/GameDetail.vue'
+import LoginPage from '@/views/LoginPage.vue'
+import SettingsPage from '@/views/SettingsPage.vue'
+import OtherPage from '@/views/OtherPage.vue'
+
+import { useAuth } from './composables/useAuth'
+const { isAuthenticated } = useAuth()
 
 const routes = [
   { path: '/project5/', name: 'Home', component: HomePage },
@@ -23,7 +24,7 @@ const router = createRouter({
 
 router.beforeEach((to, _, next) => {
   if (to.meta.requiresAuth && !isAuthenticated.value) {
-    next({ name: 'LoginPage', query: { redirect: to.fullPath } });
+    next({ name: 'LoginPage', query: { redirect: to.fullPath } })
   } else {
     next();
   }
