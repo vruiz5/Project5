@@ -3,7 +3,7 @@
     <div class="flex items-center space-x-6">
       <RouterLink :to="{ name: 'Home' }" class="text-white hover:text-gray-300">Game Collection</RouterLink>
       <RouterLink :to="{ name: 'News' }" class="text-white hover:text-gray-300">Gaming News</RouterLink>
-      <RouterLink :to="{ name: 'SettingsPage' }" class="text-white hover:text-gray-300">Settings</RouterLink>
+      <RouterLink :to="{ name: 'LeaderboardPage' }" class="text-white hover:text-gray-300">Leaderboard</RouterLink>
     </div>
 
     <div class="flex items-center">

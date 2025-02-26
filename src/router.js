@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from './views/HomePage.vue'
 import GameDetail from './views/GameDetail.vue'
 import LoginPage from './views/LoginPage.vue'
-import SettingsPage from './views/SettingsPage.vue'
+import LeaderboardPage from './views/LeaderboardPage.vue'
 import NewsPage from './views/NewsPage.vue'
 
 import { useAuth } from './composables/useAuth'
@@ -14,7 +14,7 @@ const routes = [
   { path: '/news', name: 'News', component: NewsPage, meta: { requiresAuth: true }},
   { path: '/games/:id', name: 'GameDetail', component: GameDetail, meta: { requiresAuth: true }},
   { path: '/login', name: 'LoginPage', component: LoginPage },
-  { path: '/settings', name: 'SettingsPage', component: SettingsPage, meta: { requiresAuth: true }},
+  { path: '/leaderboard', name: 'LeaderboardPage', component: LeaderboardPage, meta: { requiresAuth: true }},
 ];
 
 const router = createRouter({
