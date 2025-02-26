@@ -10,11 +10,11 @@ import { useAuth } from './composables/useAuth'
 const { isAuthenticated } = useAuth()
 
 const routes = [
-  { path: '/', name: 'Home', component: HomePage, meta: { requiresAuth: true }},
-  { path: '/news', name: 'News', component: NewsPage, meta: { requiresAuth: true }},
-  { path: '/games/:id', name: 'GameDetail', component: GameDetail, meta: { requiresAuth: true }},
-  { path: '/login', name: 'LoginPage', component: LoginPage },
-  { path: '/leaderboard', name: 'LeaderboardPage', component: LeaderboardPage, meta: { requiresAuth: true }},
+  { path: '/Poject5/', name: 'Home', component: HomePage, meta: { requiresAuth: true }},
+  { path: '/Poject5/news', name: 'News', component: NewsPage, meta: { requiresAuth: true }},
+  { path: '/Poject5/games/:id', name: 'GameDetail', component: GameDetail, meta: { requiresAuth: true }},
+  { path: '/Poject5/login', name: 'LoginPage', component: LoginPage },
+  { path: '/Poject5/leaderboard', name: 'LeaderboardPage', component: LeaderboardPage, meta: { requiresAuth: true }},
 ];
 
 const router = createRouter({
