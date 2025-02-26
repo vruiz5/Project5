@@ -4,14 +4,14 @@ import HomePage from './views/HomePage.vue'
 import GameDetail from './views/GameDetail.vue'
 import LoginPage from './views/LoginPage.vue'
 import SettingsPage from './views/SettingsPage.vue'
-import OtherPage from './views/OtherPage.vue'
+import NewsPage from './views/NewsPage.vue'
 
 import { useAuth } from './composables/useAuth'
 const { isAuthenticated } = useAuth()
 
 const routes = [
   { path: '/', name: 'Home', component: HomePage, meta: { requiresAuth: true }},
-  { path: '/other', name: 'Other', component: OtherPage, meta: { requiresAuth: true }},
+  { path: '/news', name: 'News', component: NewsPage, meta: { requiresAuth: true }},
   { path: '/games/:id', name: 'GameDetail', component: GameDetail, meta: { requiresAuth: true }},
   { path: '/login', name: 'LoginPage', component: LoginPage },
   { path: '/settings', name: 'SettingsPage', component: SettingsPage, meta: { requiresAuth: true }},

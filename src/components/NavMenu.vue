@@ -2,7 +2,7 @@
   <nav class="bg-slate-900 h-20 flex items-center justify-between px-8">
     <div class="flex items-center space-x-6">
       <RouterLink :to="{ name: 'Home' }" class="text-white hover:text-gray-300">Game Collection</RouterLink>
-      <RouterLink :to="{ name: 'Other' }" class="text-white hover:text-gray-300">Other</RouterLink>
+      <RouterLink :to="{ name: 'News' }" class="text-white hover:text-gray-300">Gaming News</RouterLink>
       <RouterLink :to="{ name: 'SettingsPage' }" class="text-white hover:text-gray-300">Settings</RouterLink>
     </div>
 
