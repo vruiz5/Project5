@@ -4,6 +4,6 @@ import GameCardSingle from './GameCardSingle.vue';
 
 <template>
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-8">
-    <GameCardSingle v-for="game in 20" :key="game"></GameCardSingle>
+    <GameCardSingle v-for="game in 8" :key="game"></GameCardSingle>
   </div>
 </template>

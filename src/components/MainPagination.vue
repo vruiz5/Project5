@@ -11,8 +11,8 @@
 
 <script setup>
 import { ref } from 'vue'
-const pages = ref(10);
-const activePage = ref(2)
+const pages = ref(5);
+const activePage = ref(1)
 
 const prevPage = () => {
   if (activePage.value > 1) {
