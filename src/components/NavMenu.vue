@@ -31,9 +31,3 @@
 import { useAuth } from '../composables/useAuth';
 const { isAuthenticated, logout, user } = useAuth();
 </script>
-
-<style scoped>
-.router-link-active {
-  @apply underline underline-offset-4;
-}
-</style>
